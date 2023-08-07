@@ -1,0 +1,105 @@
+// =========================
+// FOOTER
+// =========================
+.footer {
+	color: $light-white;
+	background-color: $dark;
+
+	.wrapper {
+		padding: 1em 2em;
+	}
+
+	.fa-solid {
+		margin-bottom: 0.3em;
+		margin-right: 0.5em;
+	}
+
+	.box-link-adress {
+		display: flex;
+		align-items: center;
+	}
+
+	&__boxes {
+		display: flex;
+		align-items: center;
+	}
+
+	&__box {
+		margin: 2em 0;
+		height: 4em;
+
+		&-position {
+			@include centerContentColumn;
+		}
+	}
+
+	.fa-brands {
+		padding: 0 0.3em;
+		font-size: 3.2rem;
+	}
+
+	&__bottom-text {
+		padding: 1em 2em;
+		text-align: center;
+	}
+}
+
+@media (min-width: 315px) {
+	.footer {
+		&__boxes {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		&__box {
+			margin: 1em;
+			width: 80%;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+	.footer {
+		.wrapper {
+			width: 100%;
+		}
+
+		&__boxes {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__box {
+			margin: 1em;
+			width: 28%;
+			height: 6em;
+		}
+
+		h3.section-heading {
+			font-size: 2.2rem;
+		}
+		.box-link {
+			font-size: 1.6rem;
+		}
+
+		.fa-brands {
+			padding: 0.3em;
+			font-size: 3.4rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.footer {
+		&__box {
+			margin: 1em;
+			width: 25%;
+		}
+	}
+}

@@ -1,0 +1,490 @@
+// =========================
+// MAIN; ABOUTUS
+// =========================
+
+.aboutus {
+	.section-heading {
+		color: $light-white;
+	}
+
+	background-image: $sectionContact;
+	background-color: $background-aboutus;
+	font-family: $fontTitle;
+	color: $font-color-dark;
+
+	&__boxes {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		width: 100%;
+
+		&-furnishing {
+			width: 30%;
+			overflow: hidden;
+		}
+	}
+
+	&__option {
+		margin: 1em 0;
+		@include boxShadowDark;
+		@include animationCards;
+		overflow: hidden;
+
+		&-info {
+			padding: 0 0 1em 0;
+			@include centerContentColumn;
+			text-align: center;
+		}
+
+		&-img {
+			position: relative;
+			width: 100%;
+			margin: 0.5em 0.5em 1em;
+			margin-top: 0.5em;
+			overflow: hidden;
+		}
+
+		&-text {
+			@include centerContentColumn;
+			font-size: 1rem;
+			text-align: center;
+			margin-top: 0.8em;
+		}
+	}
+
+	&__title {
+		margin-bottom: 0.5em;
+		font-size: 1.6rem;
+	}
+
+	a {
+		text-decoration: none;
+		color: #f6f2e9;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 2em;
+	}
+
+	&__contain {
+		&-furnishing {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0.5em;
+			padding: 0.5em;
+			width: 40%;
+			@include boxShadowDark;
+			@include animationCards;
+
+			.furnishing-icon {
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+				font-size: 1.6rem;
+			}
+			.card-title {
+				font-size: 1rem;
+				text-align: center;
+			}
+		}
+	}
+}
+
+// =========================
+// MAIN; APARTMENTS
+// =========================
+.inspiration {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 4em 0 0;
+}
+
+.card {
+	&__cards {
+		margin: 3.3em 1em;
+		cursor: pointer;
+		transition: transform 0.3s;
+
+		@include boxShadowDark;
+		@include animationCards;
+		// overflow: hidden;
+
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		transition: 0.5s;
+		width: 350px;
+		height: 300px;
+		background-color: #f4f1ed73;
+		border-radius: 8px;
+		box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+
+		&:hover {
+			height: 350px;
+
+			.card__cards-image {
+				top: -100px;
+				scale: 0.8;
+				box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+				border: 5px solid $light-white;
+				padding: 3px;
+			}
+
+			.card__cards-info {
+				margin-top: 130px;
+				height: 250px;
+				font-weight: 200;
+				color: white;
+			}
+		}
+
+		&-image {
+			position: absolute;
+			top: 20px;
+			width: 19em;
+			height: 220px;
+			background: #333;
+			border-radius: 8px;
+			overflow: hidden;
+			transition: 0.5s;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&-info {
+			padding: 0 30px;
+			text-align: center;
+			// position: absolute;
+			margin-top: 252px;
+			width: 100%;
+			height: 35px;
+			overflow: hidden;
+			transition: 0.5s;
+		}
+
+		&-heading {
+			@include centerContentColumn;
+			font-family: $fontTitle;
+			margin-bottom: 0.5em;
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+
+		&-text {
+			font-weight: 300;
+
+			a {
+				// font-size: 1.2rem;
+				color: $font-color-dark;
+				text-decoration: none;
+				transition: color 0.3s;
+				font-weight: 200;
+
+				&:hover {
+					color: $pure-white-transparent;
+				}
+			}
+		}
+	}
+}
+
+.apartments {
+	@include backgroud;
+
+	overflow: hidden;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+
+		// position: relative;
+		// justify-content: center;
+		// align-items: center;
+		// flex-wrap: wrap;
+	}
+
+	&__option {
+		margin: 1em;
+		@include boxShadowDark;
+		@include animationCards;
+		overflow: hidden;
+
+		&-img {
+			width: 100%;
+			padding: 1em 1.2em;
+		}
+
+		&-info {
+			padding: 0 1em;
+			// @include centerContentColumn;
+			text-align: center;
+			width: 100%;
+		}
+
+		&-heading {
+			@include centerContentColumn;
+			font-family: $fontTitle;
+			margin-bottom: 0.5em;
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+
+		&-text {
+			margin-bottom: 0.5em;
+			font-size: 1.3rem;
+			color: $font-color-dark;
+			position: relative;
+			margin-top: 15px;
+			display: block;
+		}
+
+		&-special {
+			width: 100%;
+			max-height: 50vh;
+			@include animationCards;
+			overflow: hidden;
+		}
+
+		// &-arrow {
+		// 	width: 100%;
+		// }
+	}
+
+	.fa-solid {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 1.8rem;
+		color: $font-color-dark;
+		padding: 1em;
+	}
+}
+
+@media (min-width: 576px) {
+	.aboutus {
+		&__box {
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+
+	h2.section-heading {
+		font-size: 4.2rem;
+	}
+
+	.aboutus {
+		&__box {
+			font-size: 2.4rem;
+		}
+
+		&__option-text {
+			font-size: 1.2rem;
+		}
+
+		&__contain {
+			&-furnishing {
+				width: 30%;
+				font-size: 21px;
+
+				.furnishing-icon {
+					margin-bottom: 0.8em;
+					font-size: 3rem;
+				}
+				.card-title {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+
+	.apartments {
+		&__box {
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__option {
+			width: 40%;
+			margin: 1.6em;
+
+			&-special {
+				width: 95%;
+			}
+
+			&-arrow {
+				width: 100%;
+			}
+		}
+
+		&__box {
+			margin: 1em;
+		}
+
+		.fa-solid {
+			font-size: 2rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.burger-btn {
+		top: 50px;
+		right: 50px;
+	}
+
+	h2.section-heading {
+		font-size: 4.8rem;
+	}
+
+	.aboutus {
+		.wrapper {
+			width: 80%;
+		}
+
+		&__option-text {
+			font-size: 1.4rem;
+		}
+
+		&__contain {
+			&-furnishing {
+				margin: 0.5em;
+				width: 30%;
+				font-size: 21px;
+
+				.furnishing-icon {
+					margin-bottom: 0.8em;
+					font-size: 3.2rem;
+				}
+				.card-title {
+					font-size: 2.4rem;
+				}
+			}
+		}
+
+		&__box {
+			margin: 0.5em;
+			font-size: 2.6rem;
+		}
+	}
+
+	.apartments {
+		&__box {
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__option {
+			width: 28%;
+			margin: 1em;
+
+			&-special {
+				width: 90%;
+			}
+
+			&-arrow {
+				width: 100%;
+			}
+		}
+
+		&__box {
+			margin: 1em;
+		}
+
+		.fa-solid {
+			font-size: 2.4rem;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.aboutus {
+		&__contain {
+			&-furnishing {
+				margin: 0.7em;
+				width: 24%;
+				font-size: 21px;
+
+				.furnishing-icon {
+					margin-bottom: 0.8em;
+					font-size: 3.2rem;
+				}
+				.card-title {
+					font-size: 2.4rem;
+				}
+			}
+		}
+	}
+
+	.apartments {
+		&__option {
+			width: 28%;
+			margin: 1em;
+
+			&-special {
+				width: 90%;
+			}
+
+			&-arrow {
+				width: 100%;
+			}
+
+			//animacja pojawiającej się informacji
+			//  &-info {
+			// 	opacity: 0;
+			// 	transition: opacity 0.8s;
+
+			// 	&:hover {
+			// 		opacity: 1;
+			// 	}
+			// }
+		}
+	}
+}
