@@ -18,8 +18,34 @@
 	transition: color 1s;
 }
 
+@mixin apartmentsHero {
+	background-image: url('/src/img/relax/mobile/apartament_front_mobile.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin apartmentsHeroBig {
+	background-image: url('/src/img/relax/apartament_front.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
 @mixin backgroud {
-	background-image: $gradientTwo, url('/src/img/brick/forest.jpg');
+	background-image: $gradientTwo, url('/src/img/background/forest.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+@mixin backgroundHeader {
+	background-image: $gradient, url('../img/apartamenty_hero_mobile.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+@mixin backgroundHeaderBig {
+	background-image: $gradient, url('../img/apartamenty_hero.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -48,7 +74,7 @@
 @mixin boxShadowDark {
 	box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
 	border-radius: 8px;
-	background-color: #f4f1ed73;;
+	background-color: #f4f1ed73;
 }
 
 @mixin boxShadow {
@@ -60,7 +86,7 @@
 
 @mixin animationCards {
 	cursor: pointer;
-	transition: transform .3s;
+	transition: transform 0.3s;
 
 	&:hover {
 		transform: scale(1.1);
@@ -70,6 +96,13 @@
 @mixin centerContentColumn {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin centerContentRow {
+	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }

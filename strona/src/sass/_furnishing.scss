@@ -1,0 +1,78 @@
+.aboutus {
+    &__furnishing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0.5em;
+        padding: 0.5em;
+        width: 40%;
+        height: 7.5em;
+        @include boxShadowDark;
+        @include animationCards;
+
+        .furnishing-icon {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            font-size: 1.6rem;
+        }
+        .card-title {
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .aboutus {
+        &__furnishing {
+            width: 32%;
+            font-size: 21px;
+    
+            .furnishing-icon {
+                margin-bottom: 0.8em;
+                font-size: 3rem;
+            }
+            .card-title {
+                font-size: 2rem;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 992px) {
+    .aboutus {
+        &__furnishing {
+            margin: 0.5em;
+            width: 38%;
+            height: 8.5em;
+            font-size: 21px;
+
+            .furnishing-icon {
+                margin-bottom: 0.8em;
+                font-size: 3.2rem;
+            }
+            .card-title {
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .aboutus {
+        &__furnishing {
+            margin: 0.7em;
+            width: 22%;
+            font-size: 21px;
+        
+            .furnishing-icon {
+                margin-bottom: 0.8em;
+                font-size: 3.2rem;
+            }
+            .card-title {
+                font-size: 2.4rem;
+            }
+        }
+    }
+}

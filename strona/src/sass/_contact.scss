@@ -2,27 +2,31 @@
 // CONTACT
 // =========================
 .contact {
-	background-image: $sectionContact;
-	background-color: #639148;
+	@include backgroud;
+
+	.wrapper-special {
+		display: flex;
+		justify-content: center;
+	}
 
 	h2.section-heading {
 		color: $light-white;
 	}
 
 	&__boxes {
-		overflow: hidden;
-		width: 100%;
+		width: 80%;
+		@include centerContentColumn;
 	}
 
 	&__box {
-		@include centerContentColumn;
+		@include boxShadowDark;
+		background-color: #f4f1ed73;
+		margin: 0.5em;
+		padding: 0.5em;
+		width: 100%;
 
-
-		&-contact {
-			width: 70%;
-			margin: 1em;
-			@include boxShadow;
-			background-color: #f4f1ed73;
+		&-first {
+			@include centerContentColumn;
 
 			&-info {
 				@include centerContentColumn;
@@ -30,12 +34,15 @@
 			}
 		}
 
+		&-second {
+			@include centerContentRow;
+		}
+
 		.fa-solid {
 			padding-right: 0.3em;
 		}
 
 		&-map {
-			width: 100%;
 			overflow: hidden;
 		}
 	}
@@ -47,91 +54,40 @@
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 765px) {
 	.contact {
 		&__boxes {
-			display: flex;
-			flex-direction: row;
-		}
-
-		&__box-first {
-			margin: 1em;
-			width: 50%;
-			display: flex;
-			flex-direction: column;
-		}
-
-		&__box-contact {
-			width: 75%;
-		}
-
-		&__box-second {
-			margin: .5em;
-			width: 60%;
+			width: 65%;
 		}
 	}
 }
 
 @media (min-width: 992px) {
-	.wrapper-special {
-		margin: 0 auto;
-		width: 100%;
-		max-width: 800px;
-		width: 80%;
-	}
-	.contact{
+	.contact {
 		&__boxes {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			width: 80%;
+		}
+
+		&__box-first {
+			width: 35%;
+			height: 260px;
 			justify-content: space-around;
 		}
 
-		&__box-contact {
-			width: 80%;
+		&__box-second {
+			width: 35%;
+			height: 260px;
 		}
 	}
-
-	// .contact {
-	// 	&__box-contact {
-	// 		width: 70%;
-	// 	}
-	// }
-
-	// .contact {
-	// 	&__boxes {
-	// 		display: flex;
-	// 		flex-direction: row;
-	// 	}
-
-	// 	&__box-first {
-	// 		margin: 1em;
-	// 		width: 40%;
-	// 		display: flex;
-	// 		flex-direction: column;
-	// 		justify-content: space-evenly;
-	// 	}
-
-	// 	&__box-contact {
-	// 		width: 60%;
-
-	// 		 .empty {
-	// 			height: 12em;
-	// 		 }
-	// 	}
-
-	// 	&__box-second {
-	// 		margin: 1em;
-	// 		width: 40%;
-	// 	}
-	// }
 }
 
 @media (min-width: 1200px) {
 	.contact {
-		&__box-first {
-			width: 40%;
-		}
-
-		&__box-second {
-			width: 50%;
+		&__boxes {
+			max-width: 760px;
 		}
 	}
 }

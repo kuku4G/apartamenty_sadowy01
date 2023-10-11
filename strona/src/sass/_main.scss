@@ -7,7 +7,7 @@
 		color: $light-white;
 	}
 
-	background-image: $sectionContact;
+	@include backgroud;
 	background-color: $background-aboutus;
 	font-family: $fontTitle;
 	color: $font-color-dark;
@@ -30,6 +30,15 @@
 			width: 30%;
 			overflow: hidden;
 		}
+	}
+
+	&__icon {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 1.8rem;
+		padding: 1em;
+		color: $font-color-dark;
 	}
 
 	&__option {
@@ -89,16 +98,6 @@
 			width: 40%;
 			@include boxShadowDark;
 			@include animationCards;
-
-			.furnishing-icon {
-				margin-top: 0.5em;
-				margin-bottom: 0.5em;
-				font-size: 1.6rem;
-			}
-			.card-title {
-				font-size: 1rem;
-				text-align: center;
-			}
 		}
 	}
 }
@@ -225,12 +224,30 @@
 
 	&__box {
 		display: flex;
-		flex-direction: column;
+		// flex-direction: column; ta właściwość rozwalała mi pion
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 
-		// position: relative;
-		// justify-content: center;
-		// align-items: center;
-		// flex-wrap: wrap;
+	&__boxes {
+		@include animationCards;
+		display: flex;
+		justify-content: center;
+		box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+		border-radius: 8px;
+		background-color: hsla(34, 24%, 94%, 0.4509803922);
+		cursor: pointer;
+		transition: transform 0.3s;
+		overflow: hidden;
+		width: 90%;
+		height: 40vh;
+		padding: 1em 1.2em;
+
+		&-special {
+			@include apartmentsHero;
+			width: 100%;
+			height: 36vh;
+		}
 	}
 
 	&__option {
@@ -240,8 +257,13 @@
 		overflow: hidden;
 
 		&-img {
-			width: 100%;
-			padding: 1em 1.2em;
+			margin: 0 auto;
+			width: 90%;
+			padding: 1em 0.3em;
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 		}
 
 		&-info {
@@ -264,28 +286,11 @@
 			font-size: 1.3rem;
 			color: $font-color-dark;
 			position: relative;
-			// margin-top: 15px;
 			display: block;
 		}
-
-		&-special {
-			width: 100%;
-			max-height: 35vh;
-			@include animationCards;
-			box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
-			border-radius: 8px;
-			background-color: hsla(34, 24%, 94%, 0.4509803922);
-			cursor: pointer;
-			transition: transform 0.3s;
-			overflow: hidden;
-		}
-
-		// &-arrow {
-		// 	width: 100%;
-		// }
 	}
 
-	.fa-solid {
+	.apartments__icon {
 		position: relative;
 		left: 50%;
 		transform: translateX(-50%);
@@ -334,17 +339,14 @@
 
 		&__contain {
 			&-furnishing {
-				width: 30%;
+				width: 32%;
 				font-size: 21px;
-
-				.furnishing-icon {
-					margin-bottom: 0.8em;
-					font-size: 3rem;
-				}
-				.card-title {
-					font-size: 2rem;
-				}
 			}
+		}
+
+		&__icon {
+			font-size: 2rem;
+			padding: 0;
 		}
 	}
 
@@ -360,8 +362,6 @@
 			margin: 1.6em;
 
 			&-special {
-				width: 80vw;
-
 				display: flex;
 				flex-flow: row nowrap;
 				align-items: center;
@@ -369,10 +369,6 @@
 				img {
 					height: fit-content;
 				}
-			}
-
-			&-arrow {
-				width: 100%;
 			}
 
 			&-img {
@@ -384,8 +380,9 @@
 			margin: 1em;
 		}
 
-		.fa-solid {
+		.apartments__icon {
 			font-size: 2rem;
+			padding: 1em 2em;
 		}
 	}
 }
@@ -402,7 +399,7 @@
 
 	.aboutus {
 		.wrapper {
-			width: 80%;
+			width: 100%;
 		}
 
 		&__option-text {
@@ -412,16 +409,8 @@
 		&__contain {
 			&-furnishing {
 				margin: 0.5em;
-				width: 30%;
+				width: 38%;
 				font-size: 21px;
-
-				.furnishing-icon {
-					margin-bottom: 0.8em;
-					font-size: 3.2rem;
-				}
-				.card-title {
-					font-size: 2.4rem;
-				}
 			}
 		}
 
@@ -432,41 +421,35 @@
 	}
 
 	.apartments {
-		&__box {
-			flex-direction: row;
-			justify-content: center;
-			flex-wrap: wrap;
-		}
-
 		&__option {
 			width: 28%;
 			margin: 1em;
-
-			&-arrow {
-				width: 100%;
-			}
 
 			&-img {
 				height: 210px;
 			}
 		}
 
-		&__box {
-			margin: 1em;
+		&__boxes-special {
+			@include apartmentsHeroBig;
 		}
 
-		.fa-solid {
-			font-size: 2.4rem;
+		.apartments__icon {
+			font-size: 2.5rem;
 		}
 	}
 }
 
 @media (min-width: 1200px) {
 	.aboutus {
+		&__boxes {
+			padding: 3em;
+		}
+
 		&__contain {
 			&-furnishing {
 				margin: 0.7em;
-				width: 24%;
+				width: 22%;
 				font-size: 21px;
 
 				.furnishing-icon {
@@ -485,42 +468,15 @@
 			width: 28%;
 			margin: 1em;
 
-			&-arrow {
-				width: 100%;
-			}
-
 			&-img {
 				height: 250px;
 			}
-
-			//animacja pojawiającej się informacji
-			//  &-info {
-			// 	opacity: 0;
-			// 	transition: opacity 0.8s;
-
-			// 	&:hover {
-			// 		opacity: 1;
-			// 	}
-			// }
 		}
 	}
 }
 
 @media (min-width: 1366px) {
 	.apartments {
-		&__option {
-			width: 28%;
-			margin: 1em;
-
-			&-arrow {
-				width: 100%;
-			}
-
-			&-img {
-				height: 250px;
-			}
-		}
-
 		&__large {
 			margin: 3em 6em;
 		}

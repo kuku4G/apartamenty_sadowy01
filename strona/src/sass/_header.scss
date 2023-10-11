@@ -27,7 +27,7 @@
 
 	&__home {
 		height: 80vh;
-		@include heroImages('../img/hero.jpg');
+		@include backgroundHeader;
 	}
 
 	&__apartment {
@@ -67,8 +67,6 @@
 		cursor: pointer;
 		@include boxShadowDark;
 		@include animationLinksWhite;
-
-
 	}
 }
 
@@ -86,4 +84,12 @@
 			font-size: 2.4rem;
 		}
 	}
+}
+
+@media (min-width: 1024px) {
+	.header {
+		&__home {
+			@include backgroundHeaderBig;
+		}
+}
 }

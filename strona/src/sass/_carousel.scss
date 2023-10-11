@@ -1,0 +1,214 @@
+$carousel-height: 16em;
+$carousel-preview-width: 70;
+
+$item-width: 220px;
+
+// $products-amount-visible: 4;
+$product-width: 200px;
+
+// $carousel-width: calc(($product-width * 3) + 33px);
+.wrapper__apartaments {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.carousel {
+	margin: 15px;
+	margin-bottom: 3em;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	
+	&__view {
+		width: 350px;
+		height: auto;
+
+		box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+		border-radius: 8px;
+		background-color: #f4f1ed73;
+
+		margin: auto;
+		overflow: hidden;
+		position: relative;
+	}
+
+	&__info {
+		padding-top: 250px;
+		text-align: center;
+	}
+
+	&__control {
+		position: absolute;
+		z-index: 1;
+		height: 3em;
+		width: 35px;
+		border-radius: 8px;
+		background-color: rgba(#ddd, 0.5);
+		transition: background-color 0.3s;
+		display: table;
+		top: 50%;
+		transform: translateY(-50%);
+
+		.icon {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+		&:hover {
+			background-color: rgba(#ddd, 0.8);
+		}
+		&:first-of-type {
+			left: 0;
+		}
+		&:last-of-type {
+			right: 0;
+		}
+	}
+}
+.product-list {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transform: translateX(0);
+	transition: transform 0.3s ease-out;
+	cursor: grab;
+	list-style: none;
+	height: $carousel-height;
+	touch-action: none;
+	user-select: none;
+
+	//border: solid 1px black;
+
+	&__item {
+		width: 100%;
+		height: $carousel-height;
+		border: solid 2px transparent;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: -4px;
+
+		// padding-left: 1em;
+		// padding-right: 1em;
+	}
+}
+
+.product {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 12em;
+	width: 90%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transition: transform 0.3s ease-in-out;
+
+	&[data-slide='1'] {
+		background-image: url(/./src/img/apartaments/aneks1.jpg);
+	}
+	&[data-slide='2'] {
+		background-image: url(/./src/img/apartaments/korytarz_parter.jpg);
+	}
+	&[data-slide='3'] {
+		background-image: url(/./src/img/apartaments/kuchnia.jpg);
+	}
+	&[data-slide='4'] {
+		background-image: url(/./src/img/apartaments/salon1.jpg);
+	}
+	&[data-slide='5'] {
+		background-image: url(/./src/img/apartaments/sypialnia1.jpg);
+	}
+	&[data-slide='6'] {
+		background-color: url(/./src/img/apartaments/sypialnia1.jpg);
+	}
+}
+
+.grabbing {
+	cursor: grabbing;
+}
+
+.grabbing .product {
+	transform: scale(0.9);
+}
+
+@media (min-width: 280px) {
+	.carousel {
+		&__view {
+			width: 240px;
+		}
+	}
+
+	.product-list {
+		&__item {
+			width: 248px;
+		}
+	}
+
+	.product {
+		height: 14em;
+	}
+}
+
+@media (min-width: 320px) {
+	.carousel {
+		&__view {
+			width: 280px;
+		}
+	}
+
+	.product-list {
+		&__item {
+			width: 290px;
+		}
+	}
+}
+
+@media (min-width: 375px) {
+	.carousel {
+		&__view {
+			width: 330px;
+		}
+	}
+
+	.product-list {
+		&__item {
+			width: 337px;
+		}
+	}
+
+	.product {
+		height: 14em;
+	}
+}
+
+@media (min-width: 410px) {
+	.product-list {
+		&__item {
+			margin-left: -4px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.product-list {
+		&__item {
+			width: 340px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+	.product-list {
+		&__item {
+			height: 20em;
+		}
+	}
+
+	.product {
+		height: 17em;
+	}
+}

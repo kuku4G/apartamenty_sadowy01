@@ -4,6 +4,7 @@
 .footer {
 	color: $light-white;
 	background-color: $dark;
+	background-image: $gradientTwo;
 
 	.wrapper {
 		padding: 1em 2em;
@@ -25,7 +26,7 @@
 	}
 
 	&__box {
-		margin: 2em 0;
+		margin: 1em;
 		height: 4em;
 
 		&-position {
@@ -53,7 +54,6 @@
 		}
 
 		&__box {
-			margin: 1em;
 			width: 80%;
 		}
 	}
@@ -76,7 +76,6 @@
 		}
 
 		&__box {
-			margin: 1em;
 			width: 28%;
 			height: 6em;
 		}
@@ -98,7 +97,6 @@
 @media (min-width: 992px) {
 	.footer {
 		&__box {
-			margin: 1em;
 			width: 25%;
 		}
 	}
