@@ -20,6 +20,16 @@
 		align-items: center;
 	}
 
+	&__regulations {
+    	text-align: center;
+		margin-top: 1em;
+		padding-top: 1em;
+	}
+
+	&__regulations a {
+		border-top: 1px solid #fff;
+	}
+
 	&__boxes {
 		display: flex;
 		align-items: center;
@@ -40,12 +50,12 @@
 	}
 
 	&__bottom-text {
-		padding: 1em 2em;
+		padding: 2em 1em 1em 1em;
 		text-align: center;
 	}
 }
 
-@media (min-width: 315px) {
+@media (min-width: 280px) {
 	.footer {
 		&__boxes {
 			display: flex;
@@ -62,7 +72,7 @@
 @media (min-width: 576px) {
 }
 
-@media (min-width: 768px) {
+@media (min-width: 715px) {
 	.footer {
 		.wrapper {
 			width: 100%;

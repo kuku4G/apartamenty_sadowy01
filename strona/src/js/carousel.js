@@ -38,7 +38,7 @@ function carouselize(carousel) {
 	//Count all the products
 	products.forEach((slide, index) => {
 
-		productListWidth += 380;
+		productListWidth += 470;
 		productList.style.width = productListWidth + 'px';
 
 		// Touch events
@@ -55,7 +55,7 @@ function carouselize(carousel) {
 
 	//disable context menu
 	window.oncontextmenu = function (event) {
-		event.preventDeafult();
+		// event.preventDeafult();
 		event.stopPropagation();
 		return false;
 	};
@@ -79,9 +79,9 @@ function carouselize(carousel) {
 
 		const movedBy = currentTranslate - prevTranslate;
 
-		if (movedBy < -100 && currentIndex < products.length - 1) currentIndex += 1;
+		if (movedBy < -30 && currentIndex < products.length - 1) currentIndex += 1;
 
-		if (movedBy > +100 && currentIndex > 0) currentIndex -= 1;
+		if (movedBy > +30 && currentIndex > 0) currentIndex -= 1;
 
 		setPositionByIndex();
 

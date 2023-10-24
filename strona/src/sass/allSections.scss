@@ -6,10 +6,10 @@
 @import './nav';
 @import './header';
 @import './footer';
-@import './backmainpage';
 @import './contact';
 @import './carousel';
 @import './furnishing';
+@import './regulation';
 
 *,
 *::after,
@@ -26,7 +26,7 @@ html {
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Noto Serif Khmer', serif;
 	font-size: 1.6rem;
 	background-color: $light-white;
 }
@@ -183,6 +183,10 @@ h3.section-heading {
 // MAIN
 // =========================
 
+.reservation {
+	background-color: #fff;
+	padding: 1em .5em 0;
+}
 // =========================
 // CONTACT
 // =========================

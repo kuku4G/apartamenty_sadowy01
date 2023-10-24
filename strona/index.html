@@ -16,7 +16,7 @@
 
 </head>
 <body>
-    
+    <!--//parent for iframe -->
     <button class="burger-btn" id="button_navigation">
     <div class="burger-btn__box">
         <div class="burger-btn__bars"></div>
@@ -26,7 +26,7 @@
 <nav class="nav">
     <div class="nav-items">
         <a href="index.html" class="nav__item">Home</a>
-        <a href="mainApartment.html" class="nav__item">Poznaj nasz obiekt</a>
+        <a href="mainApartment.html" class="nav__item">Poznaj obiekt</a>
         <a href="galeryApartments.html" class="nav__item">Apartamenty</a>
         <a href="furnishings.html" class="nav__item">Wyposażenie</a>
         <a href="mountainAttractions.html" class="nav__item">Inspiracje</a>
@@ -37,7 +37,11 @@
     <p class="header__text">Twoje miejsce z najbliższymi w górach!</p>
     <a href="#ra-reservation-form-v2-b2022fc7086097fc8c6af219eb86e7cf" class="header__btn hidden">Rezerwuj</a>
 </header>
+    
+<section class="reservation">
     <iframe class="section white-section bodyMain" id="ra-reservation-form-v2-b2022fc7086097fc8c6af219eb86e7cf" style="width: 100%; height:100px; border: none; padding: 0;" src="https://roomadmin.pl/widget/reservation-v2/start?fh=4039e42d4e63cafe84653ef9f5083accb997ea39&style=%7B%22color_accent%22%3A%22%233d3d3d%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_panel_header%22%3A%22%23FFFFFF%22%2C%22color_panel_body%22%3A%22%23FFFFFF%22%2C%22rounded_corners%22%3Atrue%7D&filter=%7B%7D&lang=pl"></iframe> <script> try { (function () { var iframe = window.document.getElementById('ra-reservation-form-v2-b2022fc7086097fc8c6af219eb86e7cf'); function raMessageReceiver(event) { if (iframe) { if(!event.data.sender || "reservation-form-b2022fc7086097fc8c6af219eb86e7cf" !== event.data.sender){ return; } if (event.data.height) { iframe.style.height = (event.data.height + 10) + "px"; } if (event.data.event && event.data.event.name === "widget.scrollup.requested") { try { iframe.scrollIntoView({behavior: "smooth", block: "start"}); } catch(e) {} } if(event.data.event && event.data.event.name === "reservation.submit.success"){ /*console.log(event.data.event.data.reservation); */ } if(event.data.event && event.data.event.name === "reservation.variant-search.start"){ /*console.log("variant search started"); */ } } } window.addEventListener("message", raMessageReceiver, false); function setup() { try { iframe.contentWindow.postMessage({ location: window.location.toString(), setup: { autoHeight: true, senderName : "reservation-form-b2022fc7086097fc8c6af219eb86e7cf" } }, "*"); } catch (e) { } } setInterval(setup, 1000); iframe.addEventListener("load", setup); })(); } catch (e) { console.error(e); } </script>
+</section>
+
     <section class="aboutus section-padding section" id="aboutus">
     <div class="wrapper">
         <h2 class="section-heading hidden">Odkryj nasze miejsce</h2>
@@ -52,7 +56,7 @@
                 alt="Około 3-letnie dziecko z czerwoną piłką bawiące się na trawniku koło domu o zachodzie słońca"
                 class="aboutus__option-img"
             />
-                <p class="aboutus__box">Poznaj nasz obiekt</p>
+                <p class="aboutus__box">Poznaj obiekt</p>
                 <p class="aboutus__option-text">Zobacz nasz budynek</p>
             </div>
             </a>
@@ -76,7 +80,7 @@
             <a href="furnishings.html">
                 <div class="aboutus__option-info">
                     <img
-                    src="/src/img/lights/tanaphong-toochinda.jpg"
+                    src="/src/img/lights/wendy-aros-routman.jpg"
                     alt="Niewyraźne zdjęcie kobiety karmiącej łyżką dziecko jednoroczne"
                     class="aboutus__option-img"
                 />
@@ -90,7 +94,7 @@
             <a href="mountainAttractions.html">
                 <div class="aboutus__option-info">
                     <img
-                    src="/src/img/lights/inspiration.jpg"
+                    src="/src/img/lights/galeria.jpg"
                     alt="Zdjęcie kobiety od tyłu, siedzącej na skale o wschodzie słońca"
                     class="aboutus__option-img"
                 />
@@ -104,7 +108,6 @@
     </div>
     </div>
 </section>
-
     <footer class="footer">
 	<div class="wrapper">
 		<div class="footer__boxes">
@@ -153,11 +156,15 @@
 					>
 						<p><i class="fa-solid fa-envelope"></i>Email</p></a
 					>
+                    
+						
                     </div>
                 </div>
 			</div>
 		</div>
 	</div>
+    <p class="footer__regulations"><a href="regulations.html" class="contact__box-contact-info box-link">Regulamin</a></p>
+
 	<p class="footer__bottom-text">&copy; <span class="footer__year"></span> ApartamentySadowy</p>
 </footer>
 

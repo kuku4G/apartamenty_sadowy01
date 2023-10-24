@@ -122,10 +122,16 @@
 
 @media (min-width: 992px) {
 	.nav {
-
 		&__item {
 			font-size: 3.2rem;
 		}
 	}
 }
 
+@media (min-width: 1200px) {
+	.nav {
+		&--active {
+			transform: translateX(70%);
+		}
+	}
+}
