@@ -15,7 +15,7 @@ const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 
 const paths = {
-    html: './html/**/*.kit',
+	html: './html/**/*.kit',
 	sass: './src/sass/**/*.scss',
 	js: './src/js/**/*.js',
 	img: './src/img/*',
@@ -25,7 +25,6 @@ const paths = {
 	jsDest: './dist/js',
 	imgDest: './dist/img',
 };
-
 
 function sassCompiler(done) {
 	src(paths.sass)
@@ -60,9 +59,7 @@ function convertImages(done) {
 }
 
 function handleKits(done) {
-	src(paths.html)
-    .pipe(kit())
-    .pipe(dest('./'));
+	src(paths.html).pipe(kit()).pipe(dest('./'));
 	done();
 }
 
@@ -83,14 +80,19 @@ function startBrowserSync(done) {
 
 function watchForChanges(done) {
 	watch('./*.html').on('change', reload);
-	watch([paths.html, paths.sass, paths.js], parallel(handleKits, sassCompiler, javaScript)).on(
-		'change',
-		reload
-	);
+	watch(
+		[paths.html, paths.sass, paths.js],
+		parallel(handleKits, sassCompiler, javaScript)
+	).on('change', reload);
 	watch(paths.img, convertImages).on('change', reload);
 	done();
 }
 
-const mainFunctions = parallel(handleKits, sassCompiler, javaScript, convertImages);
+const mainFunctions = parallel(
+	handleKits,
+	sassCompiler,
+	javaScript,
+	convertImages
+);
 exports.cleanStuff = cleanStuff;
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges);

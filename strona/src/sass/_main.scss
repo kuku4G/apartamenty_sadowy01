@@ -37,7 +37,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		font-size: 2rem;
-		padding: 1em;
+		padding: .8em;
 		color: $font-color-dark;
 	}
 
@@ -223,9 +223,9 @@
 
 	&__box {
 		display: flex;
-		// flex-direction: column; ta właściwość rozwalała mi pion
 		justify-content: center;
 		flex-wrap: wrap;
+		margin-top: 2em;
 	}
 
 	&__boxes {
@@ -238,12 +238,12 @@
 		cursor: pointer;
 		transition: transform 0.3s;
 		overflow: hidden;
-		width: 90%;
+		width: 92%;
 
 		&-special {
 			@include apartmentsHero;
 			width: 100%;
-			height: 45vh;
+			height: 36vh;
 		}
 	}
 
@@ -297,32 +297,38 @@
 	}
 }
 
-@media (min-width: 320px){
+@media (min-width: 320px) {
 	.aboutus {
 		&__contain {
-			&-furnishing  {
+			&-furnishing {
 				width: 44%;
 			}
 		}
 	}
 }
 
-@media (min-width: 414px){
+@media (min-width: 414px) {
 	.aboutus {
 		&__contain {
-			&-furnishing  {
+			&-furnishing {
 				width: 44%;
 			}
 		}
 	}
 }
-
 
 @media (min-width: 576px) {
 	.aboutus {
 		&__box {
 			flex-direction: row;
 			justify-content: space-evenly;
+		}
+	}
+
+	.apartments {
+		&__option {
+			width: 42%;
+			margin: 1em;
 		}
 	}
 }
@@ -443,6 +449,10 @@
 	}
 
 	.apartments {
+		&__boxes-special {
+			height: 52vh;
+		}
+
 		&__option {
 			width: 28%;
 			margin: 1em;
@@ -455,7 +465,7 @@
 		.apartments__icon {
 			font-size: 2.5rem;
 		}
-		
+
 		&__boxes-special {
 			@include apartmentsHeroBig;
 		}
@@ -486,6 +496,10 @@
 	}
 
 	.apartments {
+		&__boxes-special {
+			height: 43vh;
+		}
+
 		&__option {
 			width: 28%;
 			margin: 1em;
@@ -502,9 +516,5 @@
 		&__large {
 			margin: 3em 6em;
 		}
-
-		&__boxes-special {
-				height: 50vh;
-			}
 	}
 }
