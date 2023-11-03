@@ -1,0 +1,113 @@
+// =========================
+// FOOTER
+// =========================
+.footer {
+	color: $light-white;
+	background-color: $dark;
+	background-image: $gradientTwo;
+
+	.wrapper {
+		padding: 1em 2em;
+	}
+
+	.fa-solid {
+		margin-bottom: 0.3em;
+		margin-right: 0.5em;
+	}
+
+	.box-link-adress {
+		display: flex;
+		align-items: center;
+	}
+
+	&__regulations {
+    	text-align: center;
+		margin-top: 1em;
+		padding-top: 1em;
+	}
+
+	&__regulations a {
+		border-top: 1px solid #fff;
+	}
+
+	&__boxes {
+		display: flex;
+		align-items: center;
+	}
+
+	&__box {
+		margin: 1em;
+		height: 4em;
+
+		&-position {
+			@include centerContentColumn;
+		}
+	}
+
+	.fa-brands {
+		padding: 0 0.3em;
+		font-size: 3.2rem;
+	}
+
+	&__bottom-text {
+		padding: 2em 1em 1em 1em;
+		text-align: center;
+	}
+}
+
+@media (min-width: 280px) {
+	.footer {
+		&__boxes {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		&__box {
+			width: 80%;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 715px) {
+	.footer {
+		.wrapper {
+			width: 100%;
+		}
+
+		&__boxes {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__box {
+			width: 28%;
+			height: 6em;
+		}
+
+		h3.section-heading {
+			font-size: 2.2rem;
+		}
+		.box-link {
+			font-size: 1.6rem;
+		}
+
+		.fa-brands {
+			padding: 0.3em;
+			font-size: 3.4rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.footer {
+		&__box {
+			width: 25%;
+		}
+	}
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartamenty Sadowy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+
+<script
+	src="https://kit.fontawesome.com/03a2e08ba1.js"
+	crossorigin="anonymous"
+></script>
+<link rel="stylesheet" href="/dist/css/allSections.min.css" />
+
+</head>
+<body>
+    <!--//parent for iframe -->
+    <button class="burger-btn" id="button_navigation">
+    <div class="burger-btn__box">
+        <div class="burger-btn__bars"></div>
+    </div>
+</button>
+
+<nav class="nav">
+    <div class="nav-items">
+        <a href="index.html" class="nav__item">Strona główna</a>
+        <a href="apartmentsDiscoverUs.html" class="nav__item">Poznaj obiekt</a>
+        <a href="apartmentsGalery.html" class="nav__item">Apartamenty</a>
+        <a href="furnishings.html" class="nav__item">Udogodnienia</a>
+        <a href="inspiration.html" class="nav__item">Inspiracje</a>
+    </div>
+</nav>
+    <header class="header section header__home" id="home">
+    <h1 class="header__heading">Apartamenty Sadowy</h1>
+    <p class="header__text">Twoje miejsce z najbliższymi w górach!</p>
+    <a href="#ra-reservation-form-v2-b2022fc7086097fc8c6af219eb86e7cf" class="header__btn">Rezerwuj</a>
+</header>
+    
+<section class="reservation">
+    <iframe class="section white-section bodyMain" id="ra-reservation-form-v2-b2022fc7086097fc8c6af219eb86e7cf" style="width: 100%; height:100px; border: none; padding: 0;" src="https://roomadmin.pl/widget/reservation-v2/start?fh=4039e42d4e63cafe84653ef9f5083accb997ea39&style=%7B%22color_accent%22%3A%22%233d3d3d%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_panel_header%22%3A%22%23FFFFFF%22%2C%22color_panel_body%22%3A%22%23FFFFFF%22%2C%22rounded_corners%22%3Atrue%7D&filter=%7B%7D&lang=pl"></iframe> <script> try { (function () { var iframe = window.document.getElementById('ra-reservation-form-v2-b2022fc7086097fc8c6af219eb86e7cf'); function raMessageReceiver(event) { if (iframe) { if(!event.data.sender || "reservation-form-b2022fc7086097fc8c6af219eb86e7cf" !== event.data.sender){ return; } if (event.data.height) { iframe.style.height = (event.data.height + 10) + "px"; } if (event.data.event && event.data.event.name === "widget.scrollup.requested") { try { iframe.scrollIntoView({behavior: "smooth", block: "start"}); } catch(e) {} } if(event.data.event && event.data.event.name === "reservation.submit.success"){ /*console.log(event.data.event.data.reservation); */ } if(event.data.event && event.data.event.name === "reservation.variant-search.start"){ /*console.log("variant search started"); */ } } } window.addEventListener("message", raMessageReceiver, false); function setup() { try { iframe.contentWindow.postMessage({ location: window.location.toString(), setup: { autoHeight: true, senderName : "reservation-form-b2022fc7086097fc8c6af219eb86e7cf" } }, "*"); } catch (e) { } } setInterval(setup, 1000); iframe.addEventListener("load", setup); })(); } catch (e) { console.error(e); } </script>
+</section>
+
+    <section class="aboutus section-padding section" id="aboutus">
+    <div class="wrapper">
+        <h2 class="section-heading hidden">Odkryj nasze miejsce</h2>
+
+        <div class="aboutus__boxes">
+
+        <div class="aboutus__contain-furnishing hidden">
+            <a href="apartmentsDiscoverUs.html">
+            <div class="aboutus__option-info">
+                <img
+                src="/src/img/lights/discoverplace.jpg"
+                alt="Pionowa klamka drzwi wejściowych, którą trzyma młoda kobieta"
+                class="aboutus__option-img"
+            />
+                <p class="aboutus__box">Poznaj obiekt</p>
+                <p class="aboutus__option-text">Zobacz nasz budynek</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="aboutus__contain-furnishing hidden">
+            <a href="apartmentsGalery.html">
+                <div class="aboutus__option-info">
+                    <img
+                    src="/src/img/lights/apartments.jpg"
+                    alt="Klucze do obiektu Apartamenty Sadowy leżące na rękach"
+                    class="aboutus__option-img"
+                />
+                    <p class="aboutus__box">Apartamenty</p>
+                    <p class="aboutus__option-text">Zerknij do pokoju</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="aboutus__contain-furnishing hidden">
+            <a href="furnishings.html">
+                <div class="aboutus__option-info">
+                    <img
+                    src="/src/img/lights/furnishing.jpg"
+                    alt="Kawiarka postawiona na palniku"
+                    class="aboutus__option-img"
+                />
+                    <p class="aboutus__box">Udogodnienia</p>
+                    <p class="aboutus__option-text">Sprawdź wyposażenie</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="aboutus__contain-furnishing hidden">
+            <a href="inspiration.html">
+                <div class="aboutus__option-info">
+                    <img
+                    src="/src/img/lights/inspiration.jpg"
+                    alt="Kobieta ciągnąca za rękę fotografa w stronę krętej drogi asfaltowej obsypaną jesiennymi liśćmi"
+                    class="aboutus__option-img"
+                />
+                    <p class="aboutus__box">Inspiracje</p>
+                    <p class="aboutus__option-text">Przeżyj coś szczególnego</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>
+</section>
+    <footer class="footer">
+	<div class="wrapper">
+		<div class="footer__boxes">
+			<div class="footer__box">
+                <div class="footer__box-position">
+					<h3 class="section-heading box-title-footer">Adres</h3>
+
+                    <a target="_blank" href="https://goo.gl/maps/5sbPqgHUysYAEc1J9" class="box-link box-link-adress">
+                            <div class="dot-box">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="adress-box">
+                                <p>ul.Malinka 38c </p>
+                                <p>43-460 Wisła</p>
+                            </div>
+                            </a>
+                    
+				</div>
+			</div>
+
+				<div class="footer__box">
+                    <div class="footer__box-position">
+                        <h3 class="section-heading box-title">Social Media</h3>
+                        <p class="footer__box-link">
+                            <a target="_blank"href="https://www.facebook.com/profile.php?id=100077669814271" class="box-link"
+                            ><i class="fa-brands fa-square-facebook"></i
+                        ></a>
+                        <a target="_blank" href="https://www.instagram.com/apartamenty_sadowy/" class="box-link"
+                            ><i class="fa-brands fa-instagram"></i
+                        ></a>
+                        </p>
+                    </div>
+                </div>
+				<div class="footer__box">
+                    <div class="footer__box-position">
+                        <h3 class="section-heading box-title">Kontakt</h3>
+                        <a
+						href="tel:0048530535161"
+						class="contact__box-contact-info box-link"
+					>
+						<p><i class="fa-solid fa-phone"></i> +48 530 535 161</p></a
+					>
+                    <a
+						href="mailto:apartamentysadowy@gmail.com?cc=cc%40me.com&bcc=bcc%40me.com&subject=ApartamentySadowy%20Pytanie&body=Witam%21"
+						class="contact__box-contact-info box-link"
+					>
+                    <!-- <i class="fa-solid fa-envelope"></i> -->
+						<p>apartamentysadowy@gmail.com</p></a
+					>
+                    
+						
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+    <p class="footer__regulations"><a href="regulations.html" class="contact__box-contact-info box-link">Regulamin</a></p>
+
+	<p class="footer__bottom-text">&copy; <span class="footer__year"></span> ApartamentySadowy | All rights reserved</p>
+</footer>
+
+    <script defer src="/dist/js/main.min.js"></script>
+    <script defer src="/dist/js/carousel.min.js"></script>
+</body>
+</html>

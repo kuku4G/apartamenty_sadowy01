@@ -1,0 +1,392 @@
+$carousel-height: 14em;
+$carousel-preview-width: 70;
+
+$item-width: 220px;
+
+// $products-amount-visible: 4;
+$product-width: 200px;
+
+// $carousel-width: calc(($product-width * 3) + 33px);
+.wrapper__apartaments {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+    margin: 0 auto; 
+}
+
+.carousel {
+	margin: 15px;
+	margin-bottom: 3em;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	
+	&__view {
+		width: 350px;
+		height: auto;
+
+		box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+		border-radius: 8px;
+		background-color: #f4f1ed73;
+
+		margin: auto;
+		overflow: hidden;
+		position: relative;
+	}
+
+	&__info {
+		padding-top: 215px;
+		text-align: center;
+	}
+
+	&__control {
+		position: absolute;
+		z-index: 1;
+		height: 3em;
+		width: 35px;
+		border-radius: 8px;
+		background-color: rgba(#ddd, 0.5);
+		transition: background-color 0.3s;
+		display: table;
+		top: 38%;
+		transform: translateY(-50%);
+
+		.icon {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+		&:hover {
+			background-color: rgba(#ddd, 0.8);
+		}
+		&:first-of-type {
+			left: 0;
+		}
+		&:last-of-type {
+			right: 0;
+		}
+	}
+}
+.product-list {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transform: translateX(0);
+	transition: transform 0.3s ease-out;
+	cursor: grab;
+	list-style: none;
+	height: $carousel-height;
+	touch-action: none;
+	user-select: none;
+
+	&__item {
+		width: 100%;
+		height: $carousel-height;
+		border: solid 2px transparent;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: -4px;
+	}
+}
+
+.product {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 12em;
+	width: 90%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transition: transform 0.3s ease-in-out;
+
+	&[data-slide='10'] {
+		background-image: url(/./src/img/apartaments/apartament1/sypialnia1.jpg);
+	}
+	&[data-slide='11'] {
+		background-image: url(/./src/img/apartaments/apartament1/sypialnia1.1.jpg);
+	}
+	&[data-slide='12'] {
+		background-image: url(/./src/img/apartaments/apartament1/kuchnia.jpg);
+	}
+	&[data-slide='13'] {
+		background-image: url(/./src/img/apartaments/apartament1/kuchnia2.jpg);
+	}
+	&[data-slide='14'] {
+		background-image: url(/./src/img/apartaments/apartament1/sypialnia2.jpg);
+	}
+	&[data-slide='15'] {
+		background-image: url(/./src/img/apartaments/apartament1/sypialnia2.2.jpg);
+	}
+	&[data-slide='16'] {
+		background-image: url(/./src/img/apartaments/apartament1/łazienka.jpg);
+	}
+	&[data-slide='17'] {
+		background-image: url(/./src/img/apartaments/apartament1/taras.jpg);
+	}
+
+
+
+	&[data-slide='20'] {
+		background-image: url(/./src/img/apartaments/apartament2/sypialnia2.jpg);
+	}
+	&[data-slide='21'] {
+		background-image: url(/./src/img/apartaments/apartament2/sypialnia1.2.jpg);
+	}
+	&[data-slide='22'] {
+		background-image: url(/./src/img/apartaments/apartament2/sypialnia1.3.jpg);
+	}
+	&[data-slide='23'] {
+		background-image: url(/./src/img/apartaments/apartament2/sypialnia1.jpg);
+	}
+	&[data-slide='24'] {
+		background-image: url(/./src/img/apartaments/apartament1/łazienka.jpg);
+	}
+	&[data-slide='25'] {
+		background-image: url(/./src/img/apartaments/apartament1/kuchnia.jpg);
+	}
+	&[data-slide='26'] {
+		background-image: url(/./src/img/apartaments/apartament1/taras.jpg);
+	}
+
+
+	&[data-slide='30'] {
+		background-image: url(/./src/img/apartaments/apartament3/sypialnia1.jpg);
+	}
+	&[data-slide='31'] {
+		background-image: url(/./src/img/apartaments/apartament3/sypialnia1.2.jpg);
+	}
+	&[data-slide='32'] {
+		background-image: url(/./src/img/apartaments/apartament3/łazienka.jpg);
+	}
+	&[data-slide='33'] {
+		background-image: url(/./src/img/apartaments/apartament3/łazienka.2.jpg);
+	}
+	&[data-slide='34'] {
+		background-image: url(/./src/img/apartaments/apartament3/salon.jpg);
+	}
+	&[data-slide='35'] {
+		background-image: url(/./src/img/apartaments/apartament3/kuchnia1.2.jpg);
+	}
+	&[data-slide='36'] {
+		background-image: url(/./src/img/apartaments/apartament3/kuchnia1.jpg);
+	}
+	&[data-slide='37'] {
+		background-image: url(/./src/img/apartaments/apartament3/taras.jpg);
+	}
+
+
+	&[data-slide='40'] {
+		background-image: url(/./src/img/apartaments/apartament4/sypialnia2.1.jpg);
+	}
+	&[data-slide='41'] {
+		background-image: url(/./src/img/apartaments/apartament4/łazienka.jpg);
+	}
+	&[data-slide='42'] {
+		background-image: url(/./src/img/apartaments/apartament4/sypialnia1.jpg);
+	}
+	&[data-slide='43'] {
+		background-image: url(/./src/img/apartaments/apartament4/kuchnia.jpg);
+	}
+	&[data-slide='44'] {
+		background-image: url(/./src/img/apartaments/apartament4/salon1.jpg);
+	}
+	&[data-slide='45'] {
+		background-image: url(/./src/img/apartaments/apartament4/salon1.1.jpg);
+	}
+	&[data-slide='46'] {
+		background-image: url(/./src/img/apartaments/apartament4/sypialnia2.5.jpg);
+	}
+	&[data-slide='47'] {
+		background-image: url(/./src/img/apartaments/apartament4/taras.jpg);
+	}
+
+	&[data-slide='50'] {
+		background-image: url(/./src/img/apartaments/apartament5/salon1.2.jpg);
+	}
+	&[data-slide='51'] {
+		background-image: url(/./src/img/apartaments/apartament5/sypialnia2.2.jpg);
+	}
+	&[data-slide='52'] {
+		background-image: url(/./src/img/apartaments/apartament5/sypialnia2.3.jpg);
+	}
+	&[data-slide='53'] {
+		background-image: url(/./src/img/apartaments/apartament5/sypialnia1.jpg);
+	}
+	&[data-slide='54'] {
+		background-image: url(/./src/img/apartaments/apartament5/sypialnia1.2.jpg);
+	}
+	&[data-slide='55'] {
+		background-image: url(/./src/img/apartaments/apartament5/kuchnia.jpg);
+	}
+	&[data-slide='56'] {
+		background-image: url(/./src/img/apartaments/apartament5/łazienka.jpg);
+	}
+	&[data-slide='57'] {
+		background-image: url(/./src/img/apartaments/apartament4/taras.jpg);
+	}
+
+
+	&[data-slide='60'] {
+		background-image: url(/./src/img/apartaments/apartament6/salon1.1.jpg);
+	}
+	&[data-slide='61'] {
+		background-image: url(/./src/img/apartaments/apartament6/salon1.2.jpg);
+	}
+	&[data-slide='62'] {
+		background-image: url(/./src/img/apartaments/apartament6/sypialnia1.1.jpg);
+	}
+	&[data-slide='63'] {
+		background-image: url(/./src/img/apartaments/apartament6/sypialnia1.3.jpg);
+	}
+	&[data-slide='64'] {
+		background-image: url(/./src/img/apartaments/apartament6/sypialnia2.1.jpg);
+	}
+	&[data-slide='65'] {
+		background-image: url(/./src/img/apartaments/apartament6/sypialnia2.2.jpg);
+	}
+	&[data-slide='66'] {
+		background-image: url(/./src/img/apartaments/apartament6/łazienka.jpg);
+	}
+	&[data-slide='67'] {
+		background-image: url(/./src/img/apartaments/apartament6/kuchnia.jpg);
+	}
+	&[data-slide='68'] {
+		background-image: url(/./src/img/apartaments/apartament6/taras.jpg);
+	}
+}
+
+.grabbing {
+	cursor: grabbing;
+}
+
+.grabbing .product {
+	transform: scale(0.9);
+}
+
+@media (min-width: 280px) {
+	.carousel {
+		&__view {
+			width: 240px;
+		}
+	}
+
+	.product-list {
+		&__item {
+			width: 248px;
+			height: 14em;
+		}
+	}
+
+	.product {
+		height: 12em;
+	}
+}
+
+@media (min-width: 320px) {
+	.carousel {
+		&__view {
+			width: 280px;
+		}
+	}
+
+	.product-list {
+		&__item {
+			width: 290px;
+		}
+	}
+}
+
+@media (min-width: 375px) {
+	.carousel {
+		&__view {
+			width: 330px;
+		}
+		
+		&__info {
+			padding-top: 235px;
+		}
+	}
+
+	.product-list {
+		&__item {
+			width: 337px;
+			height: 16em;
+		}
+	}
+
+	.product {
+		height: 14em;
+	}
+}
+
+@media (min-width: 410px) {
+	.carousel {
+		&__view {
+			width: 363px;
+		}
+		
+		&__info {
+			padding-top: 258px;
+		}
+	}
+
+	.product-list {
+		&__item {
+			width: 372px;
+			height: 16em;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.product-list {
+		&__item {
+			width: 371px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+	.product-list {
+		&__item {
+			height: 20em;
+		}
+	}
+
+	.product {
+		height: 18em;
+	}
+}
+
+@media (min-width: 1200px) {
+	.carousel__view {
+		width: 460px;
+	}
+
+	.carousel__info {
+		padding-top: 330px;
+	}
+
+	.product {
+		height: 26em;
+	}
+
+	.product-list {
+		&__item {
+			width: 470px;
+			height: 28em;
+		}
+	}
+}
+
+
+@media (min-width: 1530px) {
+	.wrapper__apartaments {
+		padding-left: 8em;
+		padding-right: 8em;
+	}
+}

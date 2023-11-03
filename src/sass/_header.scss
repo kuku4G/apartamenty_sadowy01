@@ -1,0 +1,95 @@
+// =========================
+// HEADER
+// =========================
+.header {
+	&__heading {
+		font-size: 3.8rem;
+	}
+
+	&__text {
+		font-size: 1.8rem;
+	}
+
+	&__btn {
+		font-size: 1.6rem;
+	}
+}
+
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	text-align: center;
+	color: $pure-white;
+
+	&__home {
+		height: 80vh;
+		@include backgroundHeader;
+	}
+
+	&__apartment {
+		height: 25vh;
+		background-image: $gradientTwo;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__mountains {
+		height: 45vh;
+		@include heroImagesApartment('/src/img/aboutus/wschod.jpg');
+	}
+
+	&__heading {
+		font-family: $fontTitle;
+		font-weight: 400;
+		margin-bottom: 0.3em;
+	}
+
+	&__text {
+		font-family: $fontDescription;
+		font-weight: 300;
+	}
+
+	&__btn {
+		position: relative;
+		margin: 2em;
+		padding: 1em 0.8em;
+		font-size: 1.8rem;
+		font-family: $fontDescription;
+		color: $pure-white;
+		border: none;
+		text-decoration: none;
+		text-transform: uppercase;
+		background-image: $sectionContact;
+		cursor: pointer;
+		@include boxShadowDark;
+		@include animationLinksWhite;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+
+		&__btn {
+			font-size: 2.4rem;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.header {
+		&__home {
+			@include backgroundHeaderBig;
+		}
+}
+}

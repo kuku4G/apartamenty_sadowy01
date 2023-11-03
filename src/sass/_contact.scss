@@ -1,0 +1,93 @@
+// =========================
+// CONTACT
+// =========================
+.contact {
+	@include backgroud;
+
+	.wrapper-special {
+		display: flex;
+		justify-content: center;
+	}
+
+	h2.section-heading {
+		color: $light-white;
+	}
+
+	&__boxes {
+		width: 80%;
+		@include centerContentColumn;
+	}
+
+	&__box {
+		@include boxShadowDark;
+		background-color: #f4f1ed73;
+		margin: 0.5em;
+		padding: 0.5em;
+		width: 100%;
+
+		&-first {
+			@include centerContentColumn;
+
+			&-info {
+				@include centerContentColumn;
+				padding: 0.5em 0.8em;
+			}
+		}
+
+		&-second {
+			@include centerContentRow;
+		}
+
+		.fa-solid {
+			padding-right: 0.3em;
+		}
+
+		&-map {
+			overflow: hidden;
+		}
+	}
+}
+
+@media (min-width: 315px) {
+	.section-padding {
+		padding: 1em;
+	}
+}
+
+@media (min-width: 765px) {
+	.contact {
+		&__boxes {
+			width: 65%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.contact {
+		&__boxes {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			width: 80%;
+		}
+
+		&__box-first {
+			width: 35%;
+			height: 260px;
+			justify-content: space-around;
+		}
+
+		&__box-second {
+			width: 35%;
+			height: 260px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.contact {
+		&__boxes {
+			max-width: 760px;
+		}
+	}
+}
